@@ -1,4 +1,4 @@
-# 💚 MyStore Forgot Password E2E Testing Project
+# 💚 MyStore Forgot Password E2E Testing Project [(Video)](https://www.linkedin.com/posts/salhi-fayza-3322671a4_cypress-mailosaur-qa-activity-7325945051597967364-UcI2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC-8bxYBGAarr81UpzU0rkF4LEFTmg5cn5w)
 
 🪭 This project automates the **Forgot Password** feature of the [MyStore Cosmetics](https://mystory-cosmetics.shop) web app using Cypress (JavaScript) 🌲, Cucumber (Gherkin) 🥒, and Mailosaur 🦕.
 
