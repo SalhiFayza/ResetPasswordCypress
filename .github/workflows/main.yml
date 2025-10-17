@@ -31,11 +31,8 @@ jobs:
         run: |
           npx cypress run \
             --browser chrome \
-            --headless \
-            --reporter mochawesome \
-            --reporter-options reportDir=cypress/reports,overwrite=false,html=true,json=false,reportFilename=index.html \
-            --config video=false
-
+            --headless
+            
       - name: Upload Cypress screenshots
         if: failure()
         uses: actions/upload-artifact@v4
