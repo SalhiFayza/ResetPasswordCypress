@@ -20,9 +20,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Prepare folders
+        run: |
+          mkdir -p cypress/screenshots
+          mkdir -p cypress/reports
+          chmod -R 777 cypress/screenshots
+          chmod -R 777 cypress/reports
+
       - name: Run Cypress tests
-        run:  npx cypress run
-          
+        run: |
+          npx cypress run \
+            --browser chrome \
+            --headless \
+            --reporter mochawesome \
+            --reporter-options reportDir=cypress/reports,overwrite=false,html=true,json=false,reportFilename=index.html \
+            --config video=false
+
       - name: Upload Cypress screenshots
         if: failure()
         uses: actions/upload-artifact@v4
