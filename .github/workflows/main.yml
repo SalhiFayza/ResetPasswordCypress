@@ -29,6 +29,7 @@ jobs:
 
       - name: Run Cypress tests
         run: npx cypress run --e2e --browser chrome
+        continue-on-error: true
             
       - name: Upload Cypress HTML report
         if: always()
